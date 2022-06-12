@@ -3,7 +3,7 @@
     <!-- LOGO -->
     <a href="/" class="logo text-center logo-light">
         <span class="logo-lg">
-            <img src="/assets/images/logosipus.png" alt="" height="105" >
+            <img src="/assets/images/logo.png" alt="" height="105" >
         </span>
     </a>
 
