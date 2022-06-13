@@ -2,8 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DataCustomerController;
-use App\Http\Controllers\DataBukuController;
-use App\Http\Controllers\DataKategoriController;
+use App\Http\Controllers\DataSparepartController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -22,10 +21,9 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 
 Route::get('/', [DashboardController::class,'index'])->middleware('auth');
-Route::resource('/datacustomer', DataAnggotaController::class);
+Route::resource('/datacustomer', DataCustomerController::class);
 Route::resource('/datapegawai', UserController::class);
-Route::resource('/databuku', DataBukuController::class);
-Route::resource('/datakategori', DataKategoriController::class);
+Route::resource('/datasparepart', DataSparepartController::class);
 
 
 Auth::routes();

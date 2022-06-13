@@ -17,7 +17,7 @@ class CreateDataSparepartsTable extends Migration
             $table->id();
             $table->string('image')->nullable();
             $table->string('nama');
-            $table->varchar('harga');
+            $table->string('harga');
             $table->timestamps();
         });
     }
