@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class DataAnggota extends Model
+class DataCustomer extends Model
 {
     use HasFactory;
     protected $table='data_customers'; 
