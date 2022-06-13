@@ -13,7 +13,6 @@
                         style="object-fit: cover"></li>
                     <li class="list-group-item"><b>Nama : </b>{{$data_spareparts->nama}}</li>
                     <li class="list-group-item"><b>Harga : </b>{{$data_spareparts->harga}}</li>
-                    <li class="list-group-item"><b>Diinput Oleh   : </b>{{$data_spareparts->user->nama}}</li>
                 </ul>
             </div>
             <a class="btn btn-success mt-3" href="/datasparepart">Kembali</a>

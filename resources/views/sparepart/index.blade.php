@@ -27,7 +27,6 @@
                     <th>Gambar</th>
                     <th>Nama</th>
                     <th>Harga</th>
-                    <th>Diinput Oleh</th>
                     <th>Action</th>
 
                   </tr>
