@@ -31,8 +31,8 @@ Route::resource('/datasparepart', DataSparepartController::class);
 Route::resource('/service', DataServiceController::class);
 Route::resource('/pembelian', DataPembelianController::class);
 Route::resource('/transaksi', DataTransaksiController::class);
-Route::get('/laporan', [laporanController::class,'index']);
-Route::post('/laporan/cetak', [laporanController::class,'cetak']);
+Route::get('/laporan', [LaporanController::class,'index']);
+Route::post('/laporan/cetak', [LaporanController::class,'cetak']);
 
 
 Auth::routes();

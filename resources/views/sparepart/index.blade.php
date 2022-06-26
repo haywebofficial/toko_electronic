@@ -26,6 +26,7 @@
                     <th>Id Sparepart</th>
                     <th>Gambar</th>
                     <th>Nama</th>
+                    <th>Stok</th>
                     <th>Harga</th>
                     <th>Action</th>
 
@@ -39,6 +40,7 @@
                     
                     <td><img src="{{ asset('storage/'.$sparepart -> image) }}" alt="" height="90px" width="90px" class="rounded" style="object-fit: cover"></td>
                     <td>{{$sparepart->nama}}</td>
+                    <td>{{$sparepart->stok}}</td>
                     <td>{{$sparepart->harga}}</td>
                     <td>
                       <a class="btn btn-info" href="/datasparepart/{{$sparepart->id}}"><i class="bi bi-eye"></i></a>

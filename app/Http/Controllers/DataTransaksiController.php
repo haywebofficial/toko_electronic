@@ -47,10 +47,19 @@ class DataTransaksiController extends Controller
             'customer_id' => 'required',
             'service_id' => 'required',
             'sparepart_id' => 'required',
-            'biaya' => 'required',
 
             ]);
-            DataTransaksi::create($cek);
+            $DataSparepart = DataSparepart::find($request->sparepart_id);
+            $DataService = DataService::find($request->service_id);
+            $data = [
+                'customer_id' => $request->customer_id,
+                'service_id' => $request->service_id,
+                'sparepart_id' => $request->sparepart_id,
+                'biaya' => $DataSparepart->harga+$DataService->biaya,
+            ];
+            print_r($data);
+            DataTransaksi::create($data);
+
             return redirect('/transaksi')
             ->with('success', 'transaksi Berhasil Ditambahkan'); 
     }
@@ -102,7 +111,16 @@ class DataTransaksiController extends Controller
 
         $validatedata = $request->validate($rules);
 
-        DataTransaksi::where('id', $id)->update($validatedata);
+        $DataSparepart = DataSparepart::find($request->sparepart_id);
+            $DataService = DataService::find($request->service_id);
+            $data = [
+                'customer_id' => $request->customer_id,
+                'service_id' => $request->service_id,
+                'sparepart_id' => $request->sparepart_id,
+                'biaya' => $DataSparepart->harga+$DataService->biaya,
+            ];
+
+        DataTransaksi::where('id', $id)->update($data);
 
 
         return redirect('/transaksi')->with('toast_success', 'transaksi berhasil di edit!');

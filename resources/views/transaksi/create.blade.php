@@ -42,10 +42,10 @@
                             @endforeach
                         </select>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="jumlah">Biaya</label>
                         <input type="text" name="biaya" class="form-control" id="biaya" aria-describedby="biaya">
-                    </div>  
+                    </div>  --> 
                     <br>                    
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

@@ -45,10 +45,10 @@
                             @endforeach
                         </select>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="biaya">Biaya</label>
                         <input type="text" name="biaya" class="form-control" id="biaya" aria-describedby="biaya" value="{{$transaksi->biaya}}">
-                    </div> 
+                    </div>  -->
             <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
