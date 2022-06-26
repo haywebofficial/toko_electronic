@@ -92,6 +92,9 @@
                 <div class="collapse" id="sidebarEmail">
                     <ul class="side-nav-second-level">
                         <li>
+                            <a href="/transaksi">Data Transaksi</a>
+                        </li>
+                        <li>
                             <a href="/service">Data Servis</a>
                         </li>
                         <li>
@@ -102,7 +105,7 @@
             </li>
 
             <li class="side-nav-item">
-                <a href="apps-file-manager.html" class="side-nav-link">
+                <a href="/laporan" class="side-nav-link">
                     <i class="uil-folder-plus"></i>
                     <span> Laporan </span>
                 </a>

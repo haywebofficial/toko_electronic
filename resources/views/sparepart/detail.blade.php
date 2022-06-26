@@ -4,7 +4,7 @@
     <div class="row justify-content-center align-items-center">
         <div class="card">
             <div class="card-header">
-                Detail Buku
+                Detail Sparepart
             </div>
             <div class="card-body">
                 <ul class="list-group list-group-flush">
