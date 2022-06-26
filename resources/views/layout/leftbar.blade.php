@@ -95,7 +95,7 @@
                             <a href="/service">Data Servis</a>
                         </li>
                         <li>
-                            <a href="apps-email-read.html">Data Pembelian</a>
+                            <a href="/pembelian">Data Pembelian</a>
                         </li>
                     </ul>
                 </div>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDataSparepartsTable extends Migration
+class CreatePembelianTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateDataSparepartsTable extends Migration
      */
     public function up()
     {
-        Schema::create('data_spareparts', function (Blueprint $table) {
+        Schema::create('pembelian', function (Blueprint $table) {
             $table->id();
-            $table->string('image')->nullable();
-            $table->string('nama');
-            $table->string('harga');
-            $table->integer('stok')->nullable();
+            $table->unsignedBigInteger('sparepart_id');
+            $table->foreign('sparepart_id')->references('id')->on('data_spareparts');
+            $table->integer('jumlah')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateDataSparepartsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('data_spareparts');
+        Schema::dropIfExists('pembelian');
     }
 }
