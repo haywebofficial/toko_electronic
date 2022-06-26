@@ -19,7 +19,7 @@ class DataTransaksiController extends Controller
     public function index()
     {
         return view('transaksi.index',[
-            'transaksi'=> DataTransaksi::all()
+            'transaksi'=> DataTransaksi::paginate(4)
         ]);
     }
 
@@ -55,9 +55,8 @@ class DataTransaksiController extends Controller
                 'customer_id' => $request->customer_id,
                 'service_id' => $request->service_id,
                 'sparepart_id' => $request->sparepart_id,
-                'biaya' => $DataSparepart->harga+$DataService->biaya,
+                'biaya' => @$DataSparepart->harga+@$DataService->biaya,
             ];
-            print_r($data);
             DataTransaksi::create($data);
 
             return redirect('/transaksi')
@@ -73,8 +72,8 @@ class DataTransaksiController extends Controller
     public function show($id)
     {
         $cek=DataTransaksi::where('id', $id)->first();
-        return view('sparepart.detail', [
-            'data_spareparts' => $cek,
+        return view('transaksi.detail', [
+            'transaksi' => $cek,
         ]);
     }
 

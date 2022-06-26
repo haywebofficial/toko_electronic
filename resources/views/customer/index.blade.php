@@ -57,6 +57,7 @@
                   @endforeach
                 </tbody>
               </table>
+              {!!@$data_customers->links()!!}
             </div>
           </div>
         </div>

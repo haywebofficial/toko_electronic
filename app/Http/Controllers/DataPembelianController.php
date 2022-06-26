@@ -18,7 +18,7 @@ class DataPembelianController extends Controller
     public function index()
     {
         return view('pembelian.index',[
-            'pembelian'=> DataPembelian::all()
+            'pembelian'=> DataPembelian::paginate(4)
         ]);
     }
 

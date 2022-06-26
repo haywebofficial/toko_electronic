@@ -53,6 +53,7 @@
                   @endforeach
                 </tbody>
               </table>
+              {!!@$data_spareparts->links()!!}
             </div>
           </div>
         </div>

@@ -32,15 +32,15 @@
                 </thead>
                 <tbody>
                   
-                  @foreach ($service as $service)
+                  @foreach ($service as $servicenya)
                   <tr>
                     <td>{{$loop -> iteration}}</td>
-                    <td>{{$service->nama}}</td>
-                    <td>{{$service->biaya}}</td>
+                    <td>{{$servicenya->nama}}</td>
+                    <td>{{$servicenya->biaya}}</td>
                     <td>
-                      <a class="btn btn-info" href="/service/{{$service->id}}"><i class="bi bi-eye"></i></a>
-                      <a class="btn btn-primary" href="/service/{{$service->id}}/edit"><i class="bi bi-pencil-square"></i></a>
-                      <form action="/service/{{$service->id}}" method="POST">@csrf
+                      <a class="btn btn-info" href="/service/{{$servicenya->id}}"><i class="bi bi-eye"></i></a>
+                      <a class="btn btn-primary" href="/service/{{$servicenya->id}}/edit"><i class="bi bi-pencil-square"></i></a>
+                      <form action="/service/{{$servicenya->id}}" method="POST">@csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger"><i class="bi bi-trash"></i></button></form>
                     </td>
@@ -48,6 +48,7 @@
                   @endforeach
                 </tbody>
               </table>
+              {!!@$service->links()!!}
             </div>
           </div>
         </div>

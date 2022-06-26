@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\DataSparepart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use App\Models\DataTransaksi;
+use App\Models\DataPembelian;
 
 class DataSparepartController extends Controller
 {
@@ -16,7 +18,7 @@ class DataSparepartController extends Controller
     public function index()
     {
         return view('sparepart.index',[
-            'data_spareparts'=> DataSparepart::all()
+            'data_spareparts'=> DataSparepart::paginate(4)
         ]);
     }
 
@@ -120,6 +122,8 @@ class DataSparepartController extends Controller
      */
     public function destroy($id)
     {
+        DataTransaksi::where('sparepart_id',$id)->delete();
+        DataPembelian::where('sparepart_id',$id)->delete();
         DataSparepart::destroy($id);
         return redirect('/datasparepart')->with('toast_success', 'sparepart berhasil di hapus!');
     }

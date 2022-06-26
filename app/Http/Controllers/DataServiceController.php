@@ -16,7 +16,7 @@ class DataServiceController extends Controller
     public function index()
     {
         return view('service.index',[
-            'service'=> DataService::all()
+            'service'=> DataService::paginate(4)
         ]);
     }
 

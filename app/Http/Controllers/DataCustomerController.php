@@ -6,6 +6,7 @@ use App\Models\DataCustomer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
+use App\Models\DataTransaksi;
 
 class DataCustomerController extends Controller
 {
@@ -17,7 +18,7 @@ class DataCustomerController extends Controller
     public function index()
     {
         return view('customer.index',[
-            'data_customers'=> DataCustomer::all()
+            'data_customers'=> DataCustomer::paginate(4)
         ]);
     }
 
@@ -121,6 +122,7 @@ class DataCustomerController extends Controller
      */
     public function destroy($id)
     {
+        DataTransaksi::where('customer_id',$id)->delete();
         DataCustomer::destroy($id);
         return redirect('/datacustomer')->with('toast_success', 'Customer berhasil di hapus!');
     }
