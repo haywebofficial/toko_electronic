@@ -9,25 +9,25 @@
                     <div class="col-xxl-4 col-lg-5">
                         <div class="card">
                             <!-- Logo-->
-                             <div class="card-header pt-1 pb-1 text-center bg-primary">
-                                <a href="/">
-                                    <span><img src="assets/images/loginsipus.png" alt="" height="125"></span>
+                            <div class="card-header pt-1 pb-1 text-center bg-primary">
+                                <a href="#" style="color: white;">
+                                    WEB SERVIS ELEKTRONIK
                                 </a>
                             </div>
 
                             <div class="card-body p-4">
 
                                 <div class="text-center w-75 m-auto">
-                                    <h4 class="text-dark-50 text-center mt-0 fw-bold">Sign Up</h4>
-                                    <p class="text-muted mb-4">Don't have an account? Create your account here </p>
+                                    <h4 class="text-dark-50 text-center mt-0 fw-bold">Daftar</h4>
+                                    <p class="text-muted mb-4">Belum Punya Akun? Silahkan Daftar Disini</p>
                                 </div>
 
                                 <form action="{{ route('register') }}" method="POST">
                                     @csrf
                                     <div class="mb-3">
-                                        <label for="fullname" class="form-label">Name</label>
+                                        <label for="fullname" class="form-label">Nama</label>
                                         <input class="form-control" type="text" id="fullname"
-                                            placeholder="Enter your name" required name="nama" value="{{ old('nama') }}"
+                                            placeholder="Masukkan Nama" required name="nama" value="{{ old('nama') }}"
                                             autofocus>
                                         @error('nama')
                                         <span class="invalid-feedback" role="alert">
@@ -37,9 +37,9 @@
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="emailaddress" class="form-label">Email address</label>
+                                        <label for="emailaddress" class="form-label">Email</label>
                                         <input class="form-control" type="email" id="emailaddress" required
-                                            placeholder="Enter your email" name="email">
+                                            placeholder="Masukkan Email" name="email">
                                         @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -51,7 +51,7 @@
                                         <label for="password" class="form-label">Password</label>
                                         <div class="input-group input-group-merge">
                                             <input type="password" id="password" class="form-control"
-                                                placeholder="Enter your password" name="password">
+                                                placeholder="Masukkan password" name="password">
                                             <div class="input-group-text" data-password="false">
                                                 <span class="password-eye"></span>
                                             </div>
@@ -63,10 +63,10 @@
                                         @enderror
                                     </div>
                                     <div class="mb-3">
-                                        <label for="password" class="form-label">Confirm Password</label>
+                                        <label for="password" class="form-label">Konfirmasi Password</label>
                                         <div class="input-group input-group-merge">
                                             <input type="password" id="password" class="form-control"
-                                                placeholder="Enter your password" name="password_confirmation">
+                                                placeholder="Masukkan konfirmasi password" name="password_confirmation">
                                             <div class="input-group-text" data-password="false">
                                                 <span class="password-eye"></span>
                                             </div>
@@ -75,7 +75,7 @@
                                     <input type="hidden" value="petugas" name="level">
                                     <input type="hidden" value="@php echo date('Y-m-d'); @endphp" name="tanggal_join">
                                     <div class="mb-3 text-center">
-                                        <button class="btn btn-primary" type="submit"> Sign Up </button>
+                                        <button class="btn btn-primary" type="submit"> Daftar </button>
                                     </div>
                                 </form>
                             </div> <!-- end card-body -->
@@ -84,8 +84,8 @@
 
                         <div class="row mt-3">
                             <div class="col-12 text-center">
-                                <p class="text-muted">Already have account? <a href="{{ route('login') }}"
-                                        class="text-muted ms-1"><b>Log In</b></a></p>
+                                <p class="text-muted">Sudah punya akun? <a href="{{ route('login') }}"
+                                        class="text-muted ms-1"><b>Masuk</b></a></p>
                             </div> <!-- end col-->
                         </div>
                         <!-- end row -->

@@ -95,7 +95,6 @@
           </div>
               <div class="card-body">
                     <p>Selamat Datang Admin <b class="text-uppercase ">{{ Auth::user()->nama }}, </b></p>
-                    <p class="mb-0">Sistem Informasi Manajemen Perpustakaan "SIPUS" <br> Jangan Berikan Email dan Password Anda pada Siapapun</p>
               </div>
           </div>
       </div>

@@ -4,7 +4,7 @@
     <div class="row justify-content-center align-items-center">
         <div class="card">
             <div class="card-header">
-                Edit Data Buku
+                Edit Data Sparepart
             </div>
             <div class="card-body">
                 @if ($errors->any())
